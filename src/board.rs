@@ -87,7 +87,7 @@ impl Piece {
                         _ => break,
                     }
                 }
-                for row in prow..8 {
+                for row in prow..10 {
                     match (board.board[row][pcol].player, self.player) {
                         (Player::NoneRed, _) | (Player::NoneGreen , _) => v.push([row, pcol]),
                         (Player::Green, Player::Red) | (Player::Red, Player :: Green) => {
@@ -104,7 +104,9 @@ impl Piece {
                             v.push([row, pcol]);
                             break;
                         },
-                        _ => break,
+                        _ => {
+                            break;
+                        },
                     }
                 }
                 v
@@ -329,7 +331,7 @@ impl Piece {
                     }
                 }
                 flag = false;
-                for row in prow..8 {
+                for row in prow..10 {
                     if !flag {
                         match board.board[row][pcol].player {
                             Player::NoneRed | Player::NoneGreen => v.push([row, pcol]),
@@ -423,92 +425,92 @@ impl Board {
                     Piece::new(PieceType::Ju, Player::Green),
                 ],
                 [
-                    Piece::new(PieceType::None, Player::Green),
-                    Piece::new(PieceType::None, Player::Green),
-                    Piece::new(PieceType::None, Player::Green),
-                    Piece::new(PieceType::None, Player::Green),
-                    Piece::new(PieceType::None, Player::Green),
-                    Piece::new(PieceType::None, Player::Green),
-                    Piece::new(PieceType::None, Player::Green),
-                    Piece::new(PieceType::None, Player::Green),
-                    Piece::new(PieceType::None, Player::Green),
+                    Piece::new(PieceType::None, Player::NoneGreen),
+                    Piece::new(PieceType::None, Player::NoneGreen),
+                    Piece::new(PieceType::None, Player::NoneGreen),
+                    Piece::new(PieceType::None, Player::NoneGreen),
+                    Piece::new(PieceType::None, Player::NoneGreen),
+                    Piece::new(PieceType::None, Player::NoneGreen),
+                    Piece::new(PieceType::None, Player::NoneGreen),
+                    Piece::new(PieceType::None, Player::NoneGreen),
+                    Piece::new(PieceType::None, Player::NoneGreen),
                 ],
                 [
-                    Piece::new(PieceType::None, Player::Green),
+                    Piece::new(PieceType::None, Player::NoneGreen),
                     Piece::new(PieceType::Pao, Player::Green),
-                    Piece::new(PieceType::None, Player::Green),
-                    Piece::new(PieceType::None, Player::Green),
-                    Piece::new(PieceType::None, Player::Green),
-                    Piece::new(PieceType::None, Player::Green),
-                    Piece::new(PieceType::None, Player::Green),
+                    Piece::new(PieceType::None, Player::NoneGreen),
+                    Piece::new(PieceType::None, Player::NoneGreen),
+                    Piece::new(PieceType::None, Player::NoneGreen),
+                    Piece::new(PieceType::None, Player::NoneGreen),
+                    Piece::new(PieceType::None, Player::NoneGreen),
                     Piece::new(PieceType::Pao, Player::Green),
-                    Piece::new(PieceType::None, Player::Green),
+                    Piece::new(PieceType::None, Player::NoneGreen),
                 ],
                 [
                     Piece::new(PieceType::Bing, Player::Green),
-                    Piece::new(PieceType::None, Player::Green),
+                    Piece::new(PieceType::None, Player::NoneGreen),
                     Piece::new(PieceType::Bing, Player::Green),
-                    Piece::new(PieceType::None, Player::Green),
+                    Piece::new(PieceType::None, Player::NoneGreen),
                     Piece::new(PieceType::Bing, Player::Green),
-                    Piece::new(PieceType::None, Player::Green),
+                    Piece::new(PieceType::None, Player::NoneGreen),
                     Piece::new(PieceType::Bing, Player::Green),
-                    Piece::new(PieceType::None, Player::Green),
+                    Piece::new(PieceType::None, Player::NoneGreen),
                     Piece::new(PieceType::Bing, Player::Green),
                 ],
                 [
-                    Piece::new(PieceType::None, Player::Green),
-                    Piece::new(PieceType::None, Player::Green),
-                    Piece::new(PieceType::None, Player::Green),
-                    Piece::new(PieceType::None, Player::Green),
-                    Piece::new(PieceType::None, Player::Green),
-                    Piece::new(PieceType::None, Player::Green),
-                    Piece::new(PieceType::None, Player::Green),
-                    Piece::new(PieceType::None, Player::Green),
-                    Piece::new(PieceType::None, Player::Green),
+                    Piece::new(PieceType::None, Player::NoneGreen),
+                    Piece::new(PieceType::None, Player::NoneGreen),
+                    Piece::new(PieceType::None, Player::NoneGreen),
+                    Piece::new(PieceType::None, Player::NoneGreen),
+                    Piece::new(PieceType::None, Player::NoneGreen),
+                    Piece::new(PieceType::None, Player::NoneGreen),
+                    Piece::new(PieceType::None, Player::NoneGreen),
+                    Piece::new(PieceType::None, Player::NoneGreen),
+                    Piece::new(PieceType::None, Player::NoneGreen),
                 ],
                 [
-                    Piece::new(PieceType::None, Player::Red),
-                    Piece::new(PieceType::None, Player::Red),
-                    Piece::new(PieceType::None, Player::Red),
-                    Piece::new(PieceType::None, Player::Red),
-                    Piece::new(PieceType::None, Player::Red),
-                    Piece::new(PieceType::None, Player::Red),
-                    Piece::new(PieceType::None, Player::Red),
-                    Piece::new(PieceType::None, Player::Red),
-                    Piece::new(PieceType::None, Player::Red),
+                    Piece::new(PieceType::None, Player::NoneRed),
+                    Piece::new(PieceType::None, Player::NoneRed),
+                    Piece::new(PieceType::None, Player::NoneRed),
+                    Piece::new(PieceType::None, Player::NoneRed),
+                    Piece::new(PieceType::None, Player::NoneRed),
+                    Piece::new(PieceType::None, Player::NoneRed),
+                    Piece::new(PieceType::None, Player::NoneRed),
+                    Piece::new(PieceType::None, Player::NoneRed),
+                    Piece::new(PieceType::None, Player::NoneRed),
                 ],
                 [
                     Piece::new(PieceType::Bing, Player::Red),
-                    Piece::new(PieceType::None, Player::Red),
+                    Piece::new(PieceType::None, Player::NoneRed),
                     Piece::new(PieceType::Bing, Player::Red),
-                    Piece::new(PieceType::None, Player::Red),
+                    Piece::new(PieceType::None, Player::NoneRed),
                     Piece::new(PieceType::Bing, Player::Red),
-                    Piece::new(PieceType::None, Player::Red),
+                    Piece::new(PieceType::None, Player::NoneRed),
                     Piece::new(PieceType::Bing, Player::Red),
-                    Piece::new(PieceType::None, Player::Red),
+                    Piece::new(PieceType::None, Player::NoneRed),
                     Piece::new(PieceType::Bing, Player::Red),
                 ],
                 [
-                    Piece::new(PieceType::None, Player::Red),
+                    Piece::new(PieceType::None, Player::NoneRed),
                     Piece::new(PieceType::Pao, Player::Red),
-                    Piece::new(PieceType::None, Player::Red),
-                    Piece::new(PieceType::None, Player::Red),
-                    Piece::new(PieceType::None, Player::Red),
-                    Piece::new(PieceType::None, Player::Red),
-                    Piece::new(PieceType::None, Player::Red),
+                    Piece::new(PieceType::None, Player::NoneRed),
+                    Piece::new(PieceType::None, Player::NoneRed),
+                    Piece::new(PieceType::None, Player::NoneRed),
+                    Piece::new(PieceType::None, Player::NoneRed),
+                    Piece::new(PieceType::None, Player::NoneRed),
                     Piece::new(PieceType::Pao, Player::Red),
-                    Piece::new(PieceType::None, Player::Red),
+                    Piece::new(PieceType::None, Player::NoneRed),
                 ],
                 [
-                    Piece::new(PieceType::None, Player::Red),
-                    Piece::new(PieceType::None, Player::Red),
-                    Piece::new(PieceType::None, Player::Red),
-                    Piece::new(PieceType::None, Player::Red),
-                    Piece::new(PieceType::None, Player::Red),
-                    Piece::new(PieceType::None, Player::Red),
-                    Piece::new(PieceType::None, Player::Red),
-                    Piece::new(PieceType::None, Player::Red),
-                    Piece::new(PieceType::None, Player::Red),
+                    Piece::new(PieceType::None, Player::NoneRed),
+                    Piece::new(PieceType::None, Player::NoneRed),
+                    Piece::new(PieceType::None, Player::NoneRed),
+                    Piece::new(PieceType::None, Player::NoneRed),
+                    Piece::new(PieceType::None, Player::NoneRed),
+                    Piece::new(PieceType::None, Player::NoneRed),
+                    Piece::new(PieceType::None, Player::NoneRed),
+                    Piece::new(PieceType::None, Player::NoneRed),
+                    Piece::new(PieceType::None, Player::NoneRed),
                 ],
                 [
                     Piece::new(PieceType::Ju, Player::Red),
@@ -560,6 +562,7 @@ impl Board {
                                 self.show()
                             }
                             MoveResult::Invalid => {
+                                self.show()
                             }
                             MoveResult::RedWin => {
                                 println!("Red has won");
@@ -615,7 +618,7 @@ impl Board {
         let piece = self.board[from[0]][from[1]];
         match piece.piecetype {
             PieceType::None => {
-                match write_color("Invalid Command: There's no piece!", Some(Color::White)) {
+                match write_color("Invalid Command: There's no piece!\n", Some(Color::White)) {
                     Ok(..) => {},
                     Err(..) => {},
                 };
@@ -626,7 +629,7 @@ impl Board {
         match (piece.player, turn) {
             (Player::Red, Player::Green) => {
                 match write_color(
-                    "Invalid Command: You cannot move the opponent's piece!",
+                    "Invalid Command: You cannot move the opponent's piece!\n",
                     Some(Color::White),
                 ) {
                     Ok(..) => {},
@@ -636,7 +639,7 @@ impl Board {
             }
             (Player::Green, Player::Red) => {
                 match write_color(
-                    "Invalid Command: You cannot move the opponent's piece!",
+                    "Invalid Command: You cannot move the opponent's piece!\n",
                     Some(Color::White),
                 ) {
                     Ok(..) => {},
@@ -646,6 +649,8 @@ impl Board {
             }
             _ => {}
         }
+        println!("from: {:?}", from);
+        println!("to: {:?}", to);
         let possible_poses = piece.possible(&self, from[0], from[1]);
         match (piece.piecetype, piece.player) {
             (PieceType::Shuai, Player::Red) => {
@@ -668,9 +673,10 @@ impl Board {
             }
             _ => {}
         }
+        println!("{:?}",possible_poses);
         if !possible_poses.contains(&to) {
             println!(
-                "Invalid Command: You cannot move the piece to ({}, {}).",
+                "Invalid Command: You cannot move the piece to ({}, {}).\n",
                 to[0] + 1, to[1] + 1
             );
             return MoveResult::Invalid;
