@@ -10,3 +10,4 @@ pub fn write_color(message: &str, color: Option<Color>) -> io::Result<()> {
     bufwtr.print(&buffer)
 }
 
+
